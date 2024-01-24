@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head>
+	<title>Ejemplo de datatable estatico</title>
+</h:head> 
+<body> 
+	<h2>Ejemplo dateTable JSF</h2>
+	<h:form>
+		<h:dataTable value ="#{tablaBean.listaPersonas}" var="datos" border="4" style="width:600px">
+		
+			<h:column>
+				<f:facet name="header">
+					<h:outputLabel value="Nombre" />
+				
+				</f:facet>
+				
+				<h:outputLabel value="#{datos.nombre}" style="color:blue;" />
+				
+			</h:column>
+			<h:column>
+				<f:facet name="header"><h:outputLabel value="Apellido" /></f:facet>
+				<h:outputLabel value="#{datos.apellido}" />
+				
+			</h:column>
+			<h:column>
+				<f:facet name="header"><h:outputLabel value="Edad" /></f:facet>
+				<h:outputLabel value="#{datos.edad}" />
+				
+			</h:column>
+			<h:column>
+				<f:facet name="header"><h:outputLabel value="Profesion" /></f:facet>
+				<h:outputLabel value="#{datos.profesion}" />
+				
+			</h:column>
+			<h:column>
+				<f:facet name="header"><h:outputLabel value="Sueldo" /></f:facet>
+				<h:outputLabel value="#{datos.sueldo}" />
+				
+			</h:column>
+			<h:column>
+				<f:facet name="header"><h:outputLabel value="Sexo" /></f:facet>
+				<h:outputLabel value="#{datos.sexo}" />
+				
+			</h:column>
+		
+		</h:dataTable>
+	
+	</h:form>
+
+</body> 
+</html>

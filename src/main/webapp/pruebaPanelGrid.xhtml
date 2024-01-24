@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head>
+    <title>Ejemplo de datatable estático</title>
+    <style>
+    
+    .table-style {
+	width: 750px;
+	margin-bottom: 2px;
+	display: inline-table;
+}
+
+.table-header {
+	background-color: none;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.table-footer {
+	background-color: none;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.table-col-1 {
+	width: 50%;
+}
+
+.table-col-2 {
+	width: 50%;
+}
+#footer {
+	width: 100%;
+	text-align: center;
+	border-top: 1px solid #CCC;
+	margin-bottom: 0px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+}
+
+.miCeldaConBorde {
+    border: 2px solid #000000;
+    text-align:left;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.miCeldaConBorde2 {
+    border: 2px solid #000000;
+    text-align:center;
+    font-weight:bold;
+     margin: 0 !important;
+    padding: 0 !important;
+}
+.miCeldaConBorde3 {
+    border: 2px solid #000000;
+    text-align:center;
+    font-weight:bold;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.miCeldaConBorde4 {
+    border: 1px solid #ff0000; /* Borde de 1 píxel con color rojo (#ff0000) */
+    padding: 10px; /* Relleno de 10 píxeles */
+}
+    
+    
+    </style>
+    
+</h:head> 
+<h:body>
+    <h:form>
+        <h:panelGrid id="tablaPrincipal" columns="2" border="1" bordercolor="#000080" bgcolor="#CCD9DB" cellpadding="10" width="100%" style="text-align:center;">
+			<f:facet name="header">
+					<h:outputText value="Detalles de CONTACTO para gestión de incidencias." />
+			</f:facet>
+		
+            <h:outputLabel style="text-align:center;" for="it-nombre-3" value="Problemas relacionados con el uso de la aplicación, funcionalidades incorrectas y sugerencias."  />
+       		<h:panelGrid width="100%" border="1"  columns="2" headerClass="table-header" footerClass="table-footer" columnClasses="table-col-1,table-col-2" styleClass="table-style" style=" border-collapse: collapse; border-color: blue;border-width: 1px;" cellspacing="0" >
+				
+				
+				<h:outputLabel style="text-align:left;font-weight:bold;" for="it-nombre-3" value="Teléfono *"  />
+				
+				
+				
+				
+				<h:outputLabel 
+				  style="text-align:left;font-weight:bold;"
+				 for="it-nombre-3" value="96 35 43553"  />
+				
+				
+				
+				
+				<h:outputLabel style="font-weight:bold;" for="it-apellido-3" value="Email " />
+				
+				
+				
+				  
+				 <h:outputLink value="mailto:almacen.datos@dgt.es">
+			                                <h:outputText value="almacen.datos@dgt.es" />
+			     </h:outputLink>
+			
+			
+				<f:facet name="footer" >
+				
+				   
+					<h:outputText value="* (de 9:00 a 20:00)" />
+				
+					
+				</f:facet>
+
+		</h:panelGrid>
+       		
+        </h:panelGrid>
+    </h:form>
+    
+
+
+</h:body>
+</html>

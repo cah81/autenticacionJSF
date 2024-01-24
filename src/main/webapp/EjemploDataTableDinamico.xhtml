@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head>Datatable dinamico</h:head> 
+<body> 
+	<h2>Ejemplo de datatable dinamico</h2>
+	<h:form>
+		<h:panelGrid columns="2">
+		<h:outputLabel value="Nombres" for="nombre" style="width:150px;"/>
+		<h:inputText value="#{tablaBean.miPersona.nombre}" id="nombre" style="width:150px;" />	
+			<h:outputLabel value="Apellido " for="apellido"  style="width:150px;"/>
+			<h:inputText value="#{tablaBean.miPersona.apellido}" id="apellido" style="width:150px;" />
+	<!--  	<h:inputText value="#{tablaBean.miPersona.apellido} "  id="apellido" style="width:150px;" />-->	
+	<!--  		<h:outputLabel value="Edad" for="edad" style="width:150px;"/>
+			<h:inputText value="#{tablaBean.miPersona.edad} " id="edad" style="width:150px;" />
+			<h:outputLabel value="Profesion" for="profesion"/>
+			<h:inputText value="#{tablaBean.miPersona.profesion} " id="profesion" style="width:150px;" />
+			<h:outputLabel value="Sueldo" for="sueldo"/>
+			<h:inputText value="#{tablaBean.miPersona.sueldo} "  id="sueldo" style="width:150px; border=1px"  />
+			<h:outputLabel value="Sexo" for="sexo"/>
+			<h:selectOneMenu value="#{tablaBean.miPersona.sexo} "  id="sexo"  style="width:150px;">
+				<f:selectItem itemValue="M" itemLabel="Masculino"/>
+				<f:selectItem itemValue="F" itemLabel="Femenino"/>
+			</h:selectOneMenu>-->
+	</h:panelGrid>
+		<br></br>
+		<h:commandButton  value="Registrar" action="#{tablaBean.agregarPersona()}" style="width:150px;"/>
+		<br></br>
+		<br></br>
+		
+		<h:dataTable value ="#{tablaBean.listaPersonas}" var="datos" border="4" style="width:600px">
+		
+			<h:column>
+				<f:facet name="header">
+					<h:outputLabel value="Nombre" />
+				
+				</f:facet>
+				
+				<h:outputLabel value="#{datos.nombre}" style="color:blue;" />
+				
+			</h:column>
+			<h:column>
+				<f:facet name="header"><h:outputLabel value="Apellido" /></f:facet>
+				<h:outputLabel value="#{datos.apellido}" />
+				
+			</h:column>
+			<h:column>
+				<f:facet name="header"><h:outputLabel value="Edad" /></f:facet>
+				<h:outputLabel value="#{datos.edad}" />
+				
+			</h:column>
+			<h:column>
+				<f:facet name="header"><h:outputLabel value="Profesion" /></f:facet>
+				<h:outputLabel value="#{datos.profesion}" />
+				
+			</h:column>
+			<h:column>
+				<f:facet name="header"><h:outputLabel value="Sueldo" /></f:facet>
+				<h:outputLabel value="#{datos.sueldo}" />
+				
+			</h:column>
+			<h:column>
+				<f:facet name="header"><h:outputLabel value="Sexo" /></f:facet>
+				<h:outputLabel value="#{datos.sexo}" />
+				
+			</h:column>
+		
+		</h:dataTable>
+</h:form>
+</body> 
+</html>

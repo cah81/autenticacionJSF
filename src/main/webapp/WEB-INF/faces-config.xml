@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_3.xsd"
+              version="2.3">
+              
+              
+    <!-- Configuración específica de JSF (puedes dejar esto vacío para configuraciones básicas) -->
+    
+   <navigation-rule>
+        <from-view-id>/login.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>bienvenido</from-outcome>
+            <to-view-id>/tool-tip.xhtml</to-view-id>
+            <!-- Puedes agregar más configuraciones si es necesario -->
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>error</from-outcome>
+            <to-view-id>/error.xhtml</to-view-id>
+            <!-- Puedes agregar más configuraciones si es necesario -->
+        </navigation-case>
+    </navigation-rule>
+</faces-config>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+    <title>Formulario de Inicio de Sesión</title>
+</h:head>
+<h:body>
+    <h:form>
+        <h:panelGrid columns="2">
+            <h:outputLabel for="username">Usuario:</h:outputLabel>
+            <h:inputText id="username" value="#{loginBean.username}" required="true" />
+
+            <h:outputLabel for="password">Contraseña:</h:outputLabel>
+            <h:inputSecret id="password" value="#{loginBean.password}" required="true" />
+        </h:panelGrid>
+
+        <h:commandButton value="Iniciar Sesión" action="#{loginBean.login}" />
+    </h:form>
+</h:body>
+</html>
